@@ -1,0 +1,17 @@
+{
+  "name": "adventjs-2023",
+  "version": "1.0.0",
+  "description": "25 daily katas by midudev",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest ",
+    "test:watch": "vitest --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "standard": "^17.1.0",
+    "vitest": "^0.34.6"
+  }
+}
