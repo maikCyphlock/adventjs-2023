@@ -1,6 +1,6 @@
 /**
  * Challenge #1: 🎁 First gift repeated!
- 
+
 In the toy factory of the North Pole, each toy has a unique identification number.
 
 However, due to an error in the toy machine, some numbers have been assigned to more than one toy.
@@ -25,24 +25,21 @@ const firstRepeatedId3 = findFirstRepeated(giftIds3)
 console.log(firstRepeatedId3) // 5
 Watch out! The elves say this is a Google technical test.
  */
-function findFirstRepeated(giftIds) {
-    let firstOccurrence = {};
+function findFirstRepeated (giftIds) {
+  const firstOccurrence = {}
 
-    for (let i = 0; i < giftIds.length; i++) {
-        if (firstOccurrence[giftIds[i]]) {
-            return giftIds[i];
-        }
-        firstOccurrence[giftIds[i]] = true;
+  for (let i = 0; i < giftIds.length; i++) {
+    if (firstOccurrence[giftIds[i]]) {
+      return giftIds[i]
     }
+    firstOccurrence[giftIds[i]] = true
+  }
 
-    return -1;
+  return -1
 }
-
-
-
 
 console.log(findFirstRepeated([2, 1, 3, 5, 3, 2]))
 
 export {
-    findFirstRepeated
+  findFirstRepeated
 }

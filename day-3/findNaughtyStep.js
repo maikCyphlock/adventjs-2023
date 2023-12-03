@@ -24,21 +24,18 @@ The modification can occur anywhere in the string.
 The original steps could be empty
  */
 
-
-function findNaughtyStep(original, modified) {
-    let modifiedWord = '';
-    for (let i = 0; i < modified.length || modifiedWord; i++) {
-        if (original[i] !== modified[i]) {
-            if (modified.length > original.length) {
-                return modifiedWord = modified[i]
-            } else {
-                return modifiedWord = original[i]
-            }
-
-        }
-
+function findNaughtyStep (original, modified) {
+  let modifiedWord = ''
+  for (let i = 0; i < modified.length || modifiedWord; i++) {
+    if (original[i] !== modified[i]) {
+      if (modified.length > original.length) {
+        modifiedWord = modified[i]
+      } else {
+        modifiedWord = original[i]
+      }
     }
-    return modifiedWord ?? modifiedWord
+  }
+  return modifiedWord ?? modifiedWord
 }
 
 console.log()
@@ -47,5 +44,5 @@ const modified = 'abcd'
 console.log(findNaughtyStep(original, modified))
 
 export {
-    findNaughtyStep
+  findNaughtyStep
 }

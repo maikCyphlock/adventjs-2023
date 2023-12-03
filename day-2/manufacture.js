@@ -24,42 +24,39 @@
 */
 
 /**
- * 
- * @param {[]} gifts 
- * @param {string} materials 
- * @returns 
+ *
+ * @param {[]} gifts
+ * @param {string} materials
+ * @returns
  */
 
-function manufacture(gifts, materials) {
-    // my mapita sucka. 🤘💀
-    const Mapita = {};
-    const result = []
-    materials = materials.split('');
-    materials.forEach((word, i) => {
-        Mapita[word] = word
-    })
+function manufacture (gifts, materials) {
+  // my mapita sucka. 🤘💀
+  const Mapita = {}
+  const result = []
+  materials = materials.split('')
+  materials.forEach((word, i) => {
+    Mapita[word] = word
+  })
 
-    gifts.forEach(gift => {
-        let splittedGift = gift.split('');
+  gifts.forEach(gift => {
+    const splittedGift = gift.split('')
 
-        const isTrue = splittedGift.every(word => Mapita[word] === word);
+    const isTrue = splittedGift.every(word => Mapita[word] === word)
 
-        if (isTrue) {
-            return result.push(gift)
-        }
-    })
+    if (isTrue) {
+      return result.push(gift)
+    }
+  })
 
-    return result
+  return result
 }
 
 const gifts = ['tren', 'oso', 'pelota']
 const materials = 'tronesa'
 
-
-
-
 console.log(manufacture(gifts, materials))
 
 export {
-    manufacture
+  manufacture
 }
