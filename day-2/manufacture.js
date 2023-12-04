@@ -31,25 +31,12 @@
  */
 
 function manufacture (gifts, materials) {
-  // my mapita sucka. 🤘💀
-  const Mapita = {}
-  const result = []
-  materials = materials.split('')
-  materials.forEach((word, i) => {
-    Mapita[word] = word
+  const materialsSet = new Set(materials.split(''))
+
+  return gifts.filter(gift => {
+    const giftParts = gift.split('')
+    return giftParts.every(part => materialsSet.has(part))
   })
-
-  gifts.forEach(gift => {
-    const splittedGift = gift.split('')
-
-    const isTrue = splittedGift.every(word => Mapita[word] === word)
-
-    if (isTrue) {
-      return result.push(gift)
-    }
-  })
-
-  return result
 }
 
 const gifts = ['tren', 'oso', 'pelota']
