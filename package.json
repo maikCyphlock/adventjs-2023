@@ -1,6 +1,7 @@
 {
   "name": "adventjs-2023",
   "version": "1.0.0",
+  "type": "module",
   "description": "25 daily katas by midudev",
   "main": "index.js",
   "scripts": {
